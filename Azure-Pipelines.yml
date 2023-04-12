@@ -5,7 +5,7 @@ variables:
   appNamePrefix: 'shoppingapp1'
 
 trigger:
-- master
+- main
 
 stages:
 # - stage: Build
@@ -32,7 +32,7 @@ stages:
 
 - stage: Packing_Artifacts
   displayName: Packing artifacts stage
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
   pool:
     name: Azure Pipelines
     vmImage: 'ubuntu-latest'
@@ -114,7 +114,7 @@ stages:
 
 - stage: Provision_Infrastructure
   displayName: Provision infrastructure stage
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
   pool:
     name: Azure Pipelines
   variables:
@@ -149,7 +149,7 @@ stages:
 
 - stage: Deploy_Solution
   displayName: Deploy solution stage
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
   pool:
     name: Azure Pipelines
   variables:
