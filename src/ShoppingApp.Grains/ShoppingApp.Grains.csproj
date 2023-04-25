@@ -8,8 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2022.3.1" />
-    <PackageReference Include="Microsoft.Orleans.Runtime" Version="7.1.1" />
-    <PackageReference Include="Microsoft.Orleans.Sdk" Version="7.1.1" />
+    <PackageReference Include="Microsoft.Orleans.Runtime" Version="7.1.2" />
+    <PackageReference Include="Microsoft.Orleans.Sdk" Version="7.1.2" />
   </ItemGroup>
 
   <ItemGroup>

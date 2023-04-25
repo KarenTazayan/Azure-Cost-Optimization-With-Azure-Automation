@@ -1,0 +1,10 @@
+# Step 01: Create a resource group
+az group create --name "rg-exercise-1" --location "francecentral"
+# Step 02: Create an Azure Automation account
+az automation account create --automation-account-name "aa-exercise-1" `
+    --location "francecentral" --resource-group "rg-exercise-1"
+# Step 03: Install-Module -Name Az.ResourceGraph
+# Step 04: Enable a system assigned managed identity
+# Step 05: Assighn the "Contributor" role to the managed identity
+# Step 05: Create a runbook with name "EliminateTempResources" and  
+# code from "remove-unused-services.ps1" file
